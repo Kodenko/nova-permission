@@ -5,6 +5,7 @@ namespace Vyuldashev\NovaPermission;
 use Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
+use Illuminate\Http\Request;
 
 class NovaPermissionTool extends Tool
 {
@@ -56,5 +57,9 @@ class NovaPermissionTool extends Tool
         $this->permissionPolicy = $permissionPolicy;
 
         return $this;
+    }
+    
+    public function menu(Request $request): void
+    {
     }
 }
